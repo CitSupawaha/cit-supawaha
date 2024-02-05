@@ -335,7 +335,7 @@ function App() {
                       {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                       <img
                         className="w-full lg:absolute lg:inset-y-0 lg:left-24 lg:h-full lg:w-auto lg:max-w-none"
-                        src="../src/assets/image/profile.png"
+                        src="https://drive.google.com/file/d/1-Kup7bQSziT8akFqS4BP8Ky9WGXSGI4E/view?usp=drive_link"
                         alt=""
                       />
                     </div>
