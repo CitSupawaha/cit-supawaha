@@ -258,13 +258,13 @@ function App() {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                   <div className="mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
                     <div className="lg:py-24">
-                      <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                      <h1 className="mt-4 text-[2.5rem] font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                         {/* <span className="block">Teerasak Supawaha</span> */}
-                        <span className="block bg-gradient-to-r from-teal-200 to-cyan-400 bg-clip-text pb-3 text-transparent sm:pb-5">
+                        <span className="block bg-gradient-to-r from-teal-200 to-cyan-400 bg-clip-text  text-transparent">
                           Teerasak Supawaha.
                         </span>
                       </h1>
-                      <p className="text-base text-gray-300 sm:text-2xl">
+                      <p className="text-lg text-gray-300 sm:text-2xl">
                         I graduated from Suranaree University of Technology with
                         a degree in Computer Engeering. I'm eager to expand my
                         knowledge and skills and I'm currently working on
@@ -306,13 +306,13 @@ function App() {
                           </p>
                         </form>
                       </div> */}
-                      <div className="gap-4 sm:gap-6 flex justify-center sm:justify-start mt-5 sm:mt-7">
+                      <div className="gap-5 sm:gap-6 flex justify-center sm:justify-start mt-6 sm:mt-7">
                         <a
                           href="https://github.com/CitSupawaha"
                           target="_blank"
                         >
                           <img
-                            className="w-8  h-8 sm:h-12 sm:w-12 rounded-md"
+                            className="w-10  h-10 sm:h-14 sm:w-14 rounded-md"
                             src={Github}
                           />
                         </a>
@@ -321,7 +321,7 @@ function App() {
                           target="_blank"
                         >
                           <img
-                            className="w-8  h-8 sm:h-12 sm:w-12 rounded-md"
+                            className="w-10  h-10 sm:h-14 sm:w-14 rounded-md"
                             src={Intagram}
                           />
                         </a>
@@ -330,13 +330,13 @@ function App() {
                           target="_blank"
                         >
                           <img
-                            className="w-8  h-8 sm:h-12 sm:w-12 rounded-md"
+                            className="w-10  h-10 sm:h-14 sm:w-14 rounded-md"
                             src={Linkin}
                           />
                         </a>
                         <a href="mailto:asosid15@gmail.com" target="_blank">
                           <img
-                            className="w-8  h-8 sm:h-12 sm:w-12 rounded-md"
+                            className="w-10  h-10 sm:h-14 sm:w-14 rounded-md"
                             src={Email}
                           />
                         </a>
@@ -344,8 +344,8 @@ function App() {
                     </div>
                   </div>
 
-                  <div className=" mt-8 sm:-mb-48 lg:relative lg:m-0">
-                    <div className="mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0">
+                  <div className=" mt-4 sm:-mb-48 lg:relative lg:m-0">
+                    <div className="mx-auto max-w-md px-12 sm:max-w-2xl lg:max-w-none lg:px-0">
                       {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                       <img
                         className="w-full drop-shadow-[8px_2px_0px_rgba(255,255,255,255)] lg:absolute lg:inset-y-0 lg:left-24 lg:h-full lg:w-auto lg:max-w-none"
