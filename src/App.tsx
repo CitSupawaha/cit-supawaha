@@ -137,7 +137,7 @@ function App() {
       <div className="bg-white">
         <div className="relative overflow-hidden">
           <Popover as="header" className="relative">
-            <div className="bg-gray-900 pt-6">
+            <div className="bg-gray-900 py-3">
               <nav
                 className="relative mx-auto flex max-w-7xl items-center justify-between px-6"
                 aria-label="Global"
@@ -253,7 +253,7 @@ function App() {
             </Transition>
           </Popover>
           <main>
-            <div className="bg-gray-900 pt-10 sm:pt-16 lg:overflow-hidden  lg:pt-8">
+            <div className="bg-gray-900 pt-2 sm:pt-16 lg:overflow-hidden  lg:pt-8">
               <div className="mx-auto max-w-7xl lg:px-8">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                   <div className="mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
