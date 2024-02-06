@@ -256,15 +256,15 @@ function App() {
             <div className="bg-gray-900 pt-2 sm:pt-16 lg:overflow-hidden  lg:pt-8">
               <div className="mx-auto max-w-7xl lg:px-8">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-                  <div className="mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
+                  <div className="mx-auto max-w-md  sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
                     <div className="lg:py-24">
-                      <h1 className="mt-4 text-[2.5rem] font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                      <h1 className="mt-4 text-[2.4rem] font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                         {/* <span className="block">Teerasak Supawaha</span> */}
                         <span className="block bg-gradient-to-r from-teal-200 to-cyan-400 bg-clip-text  text-transparent">
                           Teerasak Supawaha.
                         </span>
                       </h1>
-                      <p className="text-lg text-gray-300 sm:text-2xl">
+                      <p className="text-lg text-gray-300 sm:text-2xl px-4">
                         I graduated from Suranaree University of Technology with
                         a degree in Computer Engeering. I'm eager to expand my
                         knowledge and skills and I'm currently working on
