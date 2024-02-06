@@ -12,6 +12,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
+import Email from './assets/image/mail.png'
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
@@ -323,7 +324,7 @@ function App() {
                         <a href="mailto:asosid15@gmail.com" target="_blank">
                           <img
                             className="w-8 h-8 rounded-md"
-                            src="../src/assets/image/mail.png"
+                            src={Email}
                           />
                         </a>
                       </div>
