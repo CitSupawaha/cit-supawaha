@@ -12,11 +12,20 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
-import Email from './assets/image/mail.png'
-import Linkin from './assets/image/linkin.png'
-import Flutter from './assets/image/Flutter.png'
-import Intagram from './assets/image/instagram.png'
-import Profile from './assets/image/profile.png'
+import Email from "./assets/image/mail.png";
+import Linkin from "./assets/image/linkin.png";
+import Flutter from "./assets/image/Flutter.png";
+import Intagram from "./assets/image/instagram.png";
+import Profile from "./assets/image/profile.png";
+import Github from "./assets/image/github.png";
+import Html from "./assets/image/HTML.png";
+import Js from "./assets/image/JS.png";
+import Css from "./assets/image/CSS.png";
+import React from "./assets/image/react.png";
+import Python from "./assets/image/Python.png";
+import Java from "./assets/image/Java.png";
+import Npm from "./assets/image/npm.png";
+import Vue from "./assets/image/vue.png";
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
@@ -255,7 +264,7 @@ function App() {
                           Teerasak Supawaha.
                         </span>
                       </h1>
-                      <p className="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
+                      <p className="text-base text-gray-300 sm:text-2xl">
                         I graduated from Suranaree University of Technology with
                         a degree in Computer Engeering. I'm eager to expand my
                         knowledge and skills and I'm currently working on
@@ -297,14 +306,14 @@ function App() {
                           </p>
                         </form>
                       </div> */}
-                      <div className="gap-4 flex justify-center sm:justify-start mt-5">
+                      <div className="gap-4 sm:gap-6 flex justify-center sm:justify-start mt-5 sm:mt-7">
                         <a
                           href="https://github.com/CitSupawaha"
                           target="_blank"
                         >
                           <img
-                            className="w-8 h-8 rounded-md"
-                            src="../src/assets/image/github.png"
+                            className="w-8  h-8 sm:h-12 sm:w-12 rounded-md"
+                            src={Github}
                           />
                         </a>
                         <a
@@ -312,7 +321,7 @@ function App() {
                           target="_blank"
                         >
                           <img
-                            className="w-8 h-8 rounded-md"
+                            className="w-8  h-8 sm:h-12 sm:w-12 rounded-md"
                             src={Intagram}
                           />
                         </a>
@@ -321,13 +330,13 @@ function App() {
                           target="_blank"
                         >
                           <img
-                            className="w-8 h-8 rounded-md"
+                            className="w-8  h-8 sm:h-12 sm:w-12 rounded-md"
                             src={Linkin}
                           />
                         </a>
                         <a href="mailto:asosid15@gmail.com" target="_blank">
                           <img
-                            className="w-8 h-8 rounded-md"
+                            className="w-8  h-8 sm:h-12 sm:w-12 rounded-md"
                             src={Email}
                           />
                         </a>
@@ -339,7 +348,7 @@ function App() {
                     <div className="mx-auto max-w-md px-6 sm:max-w-2xl lg:max-w-none lg:px-0">
                       {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                       <img
-                        className="w-full lg:absolute lg:inset-y-0 lg:left-24 lg:h-full lg:w-auto lg:max-w-none"
+                        className="w-full drop-shadow-[8px_2px_0px_rgba(255,255,255,255)] lg:absolute lg:inset-y-0 lg:left-24 lg:h-full lg:w-auto lg:max-w-none"
                         src={Profile}
                         alt=""
                       />
@@ -350,7 +359,7 @@ function App() {
             </div>
 
             {/* Feature section with screenshot */}
-            <div className="relative bg-gray-50 pt-16 pb-10 sm:pt-24 lg:pt-32">
+            <div className="relative bg-gray-50 py-12 sm:py-20">
               <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                 <div>
                   {/* <h2 className="text-lg font-semibold text-cyan-600">
@@ -365,40 +374,40 @@ function App() {
                 </div>
                 <div className="mb-10 mt-12 grid sm:flex grid-cols-12  justify-center  gap-6 sm:gap-10  mx-10">
                   <img
-                    className="col-span-3 sm:col-span-1 w-12 h-12"
-                    src="../src/assets/image/HTML.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={Html}
                   />
                   <img
-                    className="col-span-3 sm:col-span-1 w-12 h-12"
-                    src="../src/assets/image/CSS.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={Css}
                   />
                   <img
-                    className="col-span-3 sm:col-span-1  w-12 h-12"
-                    src="../src/assets/image/JS.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={Js}
                   />
                   <img
-                    className="col-span-3 sm:col-span-1 w-12 h-12"
-                    src="../src/assets/image/react.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={React}
                   />
                   <img
-                    className="col-span-3  sm:col-span-1  w-12 h-12"
-                    src="../src/assets/image/Flutter.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={Flutter}
                   />
                   <img
-                    className="col-span-3   sm:col-span-1 w-12 h-12"
-                    src="../src/assets/image/Python.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={Python}
                   />
                   <img
-                    className="col-span-3 sm:col-span-1  w-12 h-12"
-                    src="../src/assets/image/Java.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={Java}
                   />
                   <img
-                    className="col-span-3 sm:col-span-1  w-12 h-12"
-                    src="../src/assets/image/npm.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={Npm}
                   />
                   <img
-                    className="col-span-3 sm:col-span-1  w-12 h-12"
-                    src="../src/assets/image/vue.png"
+                    className="col-span-3 sm:col-span-1 w-12 h-12 sm:w-[5rem] sm:h-[5rem]"
+                    src={Vue}
                   />
                 </div>
               </div>
