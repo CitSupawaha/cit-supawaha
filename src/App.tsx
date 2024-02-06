@@ -13,6 +13,10 @@ import {
 } from "@heroicons/react/24/outline";
 import { Fragment } from "react";
 import Email from './assets/image/mail.png'
+import Linkin from './assets/image/linkin.png'
+import Flutter from './assets/image/Flutter.png'
+import Intagram from './assets/image/instagram.png'
+import Profile from './assets/image/profile.png'
 const navigation = [
   { name: "Product", href: "#" },
   { name: "Features", href: "#" },
@@ -309,7 +313,7 @@ function App() {
                         >
                           <img
                             className="w-8 h-8 rounded-md"
-                            src="../src/assets/image/instagram.png"
+                            src={Intagram}
                           />
                         </a>
                         <a
@@ -318,7 +322,7 @@ function App() {
                         >
                           <img
                             className="w-8 h-8 rounded-md"
-                            src="../src/assets/image/linkin.png"
+                            src={Linkin}
                           />
                         </a>
                         <a href="mailto:asosid15@gmail.com" target="_blank">
@@ -336,7 +340,7 @@ function App() {
                       {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                       <img
                         className="w-full lg:absolute lg:inset-y-0 lg:left-24 lg:h-full lg:w-auto lg:max-w-none"
-                        src="https://drive.google.com/file/d/1-Kup7bQSziT8akFqS4BP8Ky9WGXSGI4E/view?usp=drive_link"
+                        src={Profile}
                         alt=""
                       />
                     </div>
