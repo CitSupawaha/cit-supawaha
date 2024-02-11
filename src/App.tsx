@@ -1,140 +1,146 @@
-import { Popover, Transition } from "@headlessui/react";
+// import { Popover, Transition } from "@headlessui/react";
 import "./App.css";
-import {
-  ArrowPathIcon,
-  ArrowTopRightOnSquareIcon,
-  Bars3Icon,
-  CloudArrowUpIcon,
-  CogIcon,
-  LockClosedIcon,
-  ServerIcon,
-  ShieldCheckIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import { Fragment } from "react";
-import Email from "./assets/image/mail.png";
-import Linkin from "./assets/image/linkin.png";
-import Flutter from "./assets/image/Flutter.png";
-import Intagram from "./assets/image/instagram.png";
-import Profile from "./assets/image/profile.png";
-import Github from "./assets/image/github.png";
-import Html from "./assets/image/HTML.png";
-import Js from "./assets/image/JS.png";
-import Css from "./assets/image/CSS.png";
-import React from "./assets/image/react.png";
-import Python from "./assets/image/Python.png";
-import Java from "./assets/image/Java.png";
-import Npm from "./assets/image/npm.png";
-import Vue from "./assets/image/vue.png";
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+import Hero from "./component/Hero";
+import AboutMe from "./component/AboutMe"
+// import {
+//   ArrowPathIcon,
+//   ArrowTopRightOnSquareIcon,
+//   Bars3Icon,
+//   CloudArrowUpIcon,
+//   CogIcon,
+//   LockClosedIcon,
+//   ServerIcon,
+//   ShieldCheckIcon,
+//   XMarkIcon,
+// } from "@heroicons/react/24/outline";
+// import { Fragment } from "react";
+// import Email from "./assets/image/mail.png";
+// import Linkin from "./assets/image/linkin.png";
+// import Flutter from "./assets/image/Flutter.png";
+// import Intagram from "./assets/image/instagram.png";
+// import Profile from "./assets/image/profile.png";
+// import Github from "./assets/image/github.png";
+// import Html from "./assets/image/HTML.png";
+// import Js from "./assets/image/JS.png";
+// import Css from "./assets/image/CSS.png";
+// import React from "./assets/image/react.png";
+// import Python from "./assets/image/Python.png";
+// import Java from "./assets/image/Java.png";
+// import Npm from "./assets/image/npm.png";
+// import Vue from "./assets/image/vue.png";
+// const navigation = [
+//   { name: "Product", href: "#" },
+//   { name: "Features", href: "#" },
+//   { name: "Marketplace", href: "#" },
+//   { name: "Company", href: "#" },
+// ];
 
-const features = [
-  {
-    name: "Push to Deploy",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.",
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: "SSL Certificates",
-    description:
-      "Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.",
-    icon: LockClosedIcon,
-  },
-  {
-    name: "Simple Queues",
-    description:
-      "Rerum quas incidunt deleniti quaerat suscipit mollitia. Amet repellendus ut odit dolores qui.",
-    icon: ArrowPathIcon,
-  },
-  {
-    name: "Advanced Security",
-    description:
-      "Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.",
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: "Powerful API",
-    description:
-      "Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.",
-    icon: CogIcon,
-  },
-  {
-    name: "Database Backups",
-    description:
-      "Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.",
-    icon: ServerIcon,
-  },
-];
-const blogPosts = [
-  {
-    id: 1,
-    title: "Boost your conversion rate",
-    href: "#",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { name: "Article", href: "#" },
-    imageUrl:
-      "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-    preview:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-    author: {
-      name: "Roel Aufderehar",
-      imageUrl:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      href: "#",
-    },
-    readingLength: "6 min",
-  },
-  {
-    id: 2,
-    title: "How to use search engine optimization to drive sales",
-    href: "#",
-    date: "Mar 10, 2020",
-    datetime: "2020-03-10",
-    category: { name: "Video", href: "#" },
-    imageUrl:
-      "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-    preview:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
-    author: {
-      name: "Brenna Goyette",
-      imageUrl:
-        "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      href: "#",
-    },
-    readingLength: "4 min",
-  },
-  {
-    id: 3,
-    title: "Improve your customer experience",
-    href: "#",
-    date: "Feb 12, 2020",
-    datetime: "2020-02-12",
-    category: { name: "Case Study", href: "#" },
-    imageUrl:
-      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
-    preview:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
-    author: {
-      name: "Daniela Metz",
-      imageUrl:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      href: "#",
-    },
-    readingLength: "11 min",
-  },
-];
+// const features = [
+//   {
+//     name: "Push to Deploy",
+//     description:
+//       "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.",
+//     icon: CloudArrowUpIcon,
+//   },
+//   {
+//     name: "SSL Certificates",
+//     description:
+//       "Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.",
+//     icon: LockClosedIcon,
+//   },
+//   {
+//     name: "Simple Queues",
+//     description:
+//       "Rerum quas incidunt deleniti quaerat suscipit mollitia. Amet repellendus ut odit dolores qui.",
+//     icon: ArrowPathIcon,
+//   },
+//   {
+//     name: "Advanced Security",
+//     description:
+//       "Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.",
+//     icon: ShieldCheckIcon,
+//   },
+//   {
+//     name: "Powerful API",
+//     description:
+//       "Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.",
+//     icon: CogIcon,
+//   },
+//   {
+//     name: "Database Backups",
+//     description:
+//       "Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.",
+//     icon: ServerIcon,
+//   },
+// ];
+// const blogPosts = [
+//   {
+//     id: 1,
+//     title: "Boost your conversion rate",
+//     href: "#",
+//     date: "Mar 16, 2020",
+//     datetime: "2020-03-16",
+//     category: { name: "Article", href: "#" },
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+//     preview:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
+//     author: {
+//       name: "Roel Aufderehar",
+//       imageUrl:
+//         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//       href: "#",
+//     },
+//     readingLength: "6 min",
+//   },
+//   {
+//     id: 2,
+//     title: "How to use search engine optimization to drive sales",
+//     href: "#",
+//     date: "Mar 10, 2020",
+//     datetime: "2020-03-10",
+//     category: { name: "Video", href: "#" },
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+//     preview:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.",
+//     author: {
+//       name: "Brenna Goyette",
+//       imageUrl:
+//         "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//       href: "#",
+//     },
+//     readingLength: "4 min",
+//   },
+//   {
+//     id: 3,
+//     title: "Improve your customer experience",
+//     href: "#",
+//     date: "Feb 12, 2020",
+//     datetime: "2020-02-12",
+//     category: { name: "Case Study", href: "#" },
+//     imageUrl:
+//       "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+//     preview:
+//       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.",
+//     author: {
+//       name: "Daniela Metz",
+//       imageUrl:
+//         "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+//       href: "#",
+//     },
+//     readingLength: "11 min",
+//   },
+// ];
 
 function App() {
   return (
     <>
-      <div className="bg-white">
+    
+      <Hero/>
+
+      <AboutMe/>
+      {/* <div className="bg-white">
         <div className="relative overflow-hidden">
           <Popover as="header" className="relative">
             <div className="bg-gray-900 py-3">
@@ -259,7 +265,6 @@ function App() {
                   <div className="mx-auto max-w-md  sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
                     <div className="lg:py-24">
                       <h1 className="mt-4 text-[2.4rem] font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                        {/* <span className="block">Teerasak Supawaha</span> */}
                         <span className="block bg-gradient-to-r from-teal-200 to-cyan-400 bg-clip-text  text-transparent">
                           Teerasak Supawaha.
                         </span>
@@ -270,42 +275,6 @@ function App() {
                         knowledge and skills and I'm currently working on
                         improving my English proficiency.
                       </p>
-                      {/* <div className="mt-10 sm:mt-12">
-                        <form
-                          action="#"
-                          className="sm:mx-auto sm:max-w-xl lg:mx-0"
-                        >
-                          <div className="sm:flex">
-                            <div className="min-w-0 flex-1">
-                              <label htmlFor="email" className="sr-only">
-                                Email address
-                              </label>
-                              <input
-                                id="email"
-                                type="email"
-                                placeholder="Enter your email"
-                                className="block w-full rounded-md border-0 px-4 py-3 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
-                              />
-                            </div>
-                            <div className="mt-3 sm:ml-3 sm:mt-0">
-                              <button
-                                type="submit"
-                                className="block w-full rounded-md bg-gradient-to-r from-teal-500 to-cyan-600 px-4 py-3 font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
-                              >
-                                Start free trial
-                              </button>
-                            </div>
-                          </div>
-                          <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                            Start your free 14-day trial, no credit card
-                            necessary. By providing your email, you agree to our{" "}
-                            <a href="#" className="font-medium text-white">
-                              terms of service
-                            </a>
-                            .
-                          </p>
-                        </form>
-                      </div> */}
                       <div className="gap-5 sm:gap-6 flex justify-center sm:justify-start mt-6 sm:mt-7">
                         <a
                           href="https://github.com/CitSupawaha"
@@ -346,7 +315,6 @@ function App() {
 
                   <div className=" mt-4 sm:-mb-48 lg:relative lg:m-0">
                     <div className="mx-auto max-w-md px-12 sm:max-w-2xl lg:max-w-none lg:px-0">
-                      {/* Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ */}
                       <img
                         className="w-full drop-shadow-[8px_2px_0px_rgba(255,255,255,255)] lg:absolute lg:inset-y-0 lg:left-24 lg:h-full lg:w-auto lg:max-w-none"
                         src={Profile}
@@ -358,13 +326,9 @@ function App() {
               </div>
             </div>
 
-            {/* Feature section with screenshot */}
             <div className="relative bg-gray-50 py-12 sm:py-20">
               <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                 <div>
-                  {/* <h2 className="text-lg font-semibold text-cyan-600">
-                    Serverless
-                  </h2> */}
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     What I Skills?
                   </p>
@@ -412,8 +376,6 @@ function App() {
                 </div>
               </div>
             </div>
-
-            {/* Feature section with grid */}
             <div className="relative bg-white py-16 sm:py-24 lg:py-32">
               <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
                 <h2 className="text-lg font-semibold text-cyan-600">
@@ -455,8 +417,6 @@ function App() {
                 </div>
               </div>
             </div>
-
-            {/* Testimonial section */}
             <div className="bg-gradient-to-r from-teal-500 to-cyan-600 pb-16 lg:relative lg:z-10 lg:pb-0">
               <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
                 <div className="relative lg:-my-8">
@@ -505,8 +465,6 @@ function App() {
                 </div>
               </div>
             </div>
-
-            {/* Blog section */}
             <div className="relative bg-gray-50 py-16 sm:py-24 lg:py-32">
               <div className="relative">
                 <div className="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
@@ -584,8 +542,7 @@ function App() {
                 </div>
               </div>
             </div>
-
-            {/* CTA Section */}
+            
             <div className="relative bg-gray-900">
               <div className="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
                 <img
@@ -631,7 +588,7 @@ function App() {
             </div>
           </main>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
