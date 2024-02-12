@@ -15,7 +15,10 @@ import Ant from "../assets/image/Ant.png";
 import Navive from "../assets/image/Naive.png";
 import Next from "../assets/image/Next.png";
 import Tailwind from "../assets/image/Tailwind.png";
-import { CloudArrowUpIcon, LockClosedIcon } from "@heroicons/react/16/solid";
+import GitLab from "../assets/image/Gitlab.png"
+import Docker from "../assets/image/Docker.png"
+import Postman from "../assets/image/Postman.png"
+import { CloudArrowUpIcon, ComputerDesktopIcon, DevicePhoneMobileIcon, LockClosedIcon } from "@heroicons/react/16/solid";
 const skilsItem = [
   { img: Html, name: "HTML" },
   { img: Flutter, name: "Flutter" },
@@ -28,26 +31,30 @@ const skilsItem = [
   { img: Ant, name: "Ant Design" },
   { img: Navive, name: "Naive" },
   { img: Next, name: "Next" },
-  { img: Tailwind, name: "Tailwind" },
+  { img: Tailwind, name: "Tailwind CSS" },
+  { img: GitLab, name: "GitLab" },
+  { img: Docker, name: "Docker" },
+  { img: Postman, name: "Postman" },
+  { img: Java, name: "Java" },
 ];
 
 const features = [
   {
-    name: "Push to Deploy",
+    name: "Web Applications",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.",
-    icon: CloudArrowUpIcon,
+      "I’m a front-end developer with experience in building responsive and optimized sites using React, Next and Vue.",
+    icon: ComputerDesktopIcon,
   },
   {
-    name: "SSL Certificates",
+    name: "Mobile applications",
     description:
-      "Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.",
-    icon: LockClosedIcon,
+      "Developing mobile applications using Flutter.",
+    icon: DevicePhoneMobileIcon,
   },
 ];
 const AboutMe = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-gray-100">
       <div className="pt-16 sm:py-16 px-10">
         <p className="text-black text-3xl font-bold sm:text-[3em] text-center">
           {" "}
@@ -60,17 +67,18 @@ const AboutMe = () => {
           <div className="col-span-12 md:col-span-7 grid grid-cols-12 gap-4 sm:gap-4">
             {skilsItem.map((i) => (
               <div className="col-span-3 sm:col-span-3  xl:col-span-2">
-                <div className=" w-full bg-gray-100 rounded-full p-3 sm:p-2 md:p-4 flex items-center justify-center">
+                <div className=" w-full bg-gray-200 rounded-full p-3 sm:p-2 md:p-4 flex items-center justify-center">
                   <img className="rounded-full" src={i.img} />
                 </div>
-                {/* <p className="text-black font-semibold text-center text-lg mt-2">{i.name}</p> */}
+                <p className="text-gray-900 font-medium text-center text-xs mt-2">{i.name}</p>
               </div>
+              
             ))}
           </div>
           <div className="col-span-12 md:col-span-5 grid grid-cols-12 gap-6">
             {features.map((feature) => (
               <div key={feature.name} className="col-span-12">
-                <div className="rounded-lg bg-gray-100 px-4 pb-8">
+                <div className="rounded-lg bg-gray-200 px-4 pb-8">
                   <div className="pt-6">
                     <div className="flex items-center gap-4">
                       <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-purple-700 to-pink-800  outline-offset-2 transition-colors  p-3 shadow-lg">
@@ -79,12 +87,12 @@ const AboutMe = () => {
                           aria-hidden="true"
                         />
                       </span>
-                      <h3 className="text-lg font-medium tracking-tight text-gray-900">
+                      <h3 className="text-lg tracking-tight text-gray-900 font-semibold">
                         {feature.name}
                       </h3>
                     </div>
 
-                    <p className="mt-5 text-base text-gray-500">
+                    <p className="mt-5 text-base text-gray-500 font-medium">
                       {feature.description}
                     </p>
                   </div>
