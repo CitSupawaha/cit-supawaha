@@ -7,7 +7,6 @@ import { Logo } from "./Logo";
 import { NavLinks } from "./Navlinks";
 import Profile from "../assets/image/profile.png";
 
-
 const Hero = () => {
   const navigation = [
     { name: "Product", href: "#" },
@@ -52,7 +51,6 @@ const Hero = () => {
       </svg>
     );
   }
-
 
   //   function MobileNavLink(
   //     props: Omit<
@@ -216,15 +214,13 @@ const Hero = () => {
             </div>
 
             <div className="mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
-              <div className="h-full flex justify-center sm:justify-end px-10">
-           
-                <img
-                        className="w-full drop-shadow-[8px_2px_0px_rgba(255,255,255,255)] lg:absolute lg:inset-y-0 lg:left-24 lg:h-full lg:w-auto lg:max-w-none"
-                        src={Profile}
-                        alt=""
-                      />
-                {/* <img className="h-full w-[17rem] sm:w-96" src={Profile}></img> */}
-                
+              <div className="h-full flex justify-center md:justify-end px-10">
+                {/* <img
+                  className="w-full drop-shadow-[8px_2px_0px_rgba(255,255,255,255)] lg:absolute lg:inset-y-0 lg:left-24 lg:h-full lg:w-auto lg:max-w-none"
+                  src={Profile}
+                  alt=""
+                /> */}
+                <img className="h-full w-[17rem] drop-shadow-[8px_2px_0px_rgba(255,255,255,255)] sm:w-96" src={Profile}></img>
               </div>
               {/* <BackgroundIllustration className="absolute z-10 left-1/2 top-4 h-[1026px] w-[1026px] -translate-x-1/3 stroke-gray-300/70 [mask-image:linear-gradient(to_bottom,white_20%,transparent_75%)] sm:top-16 sm:-translate-x-1/2 lg:-top-16 lg:ml-12 xl:-top-14 xl:ml-0" />
             <div className="-mx-4 h-[448px] px-9   sm:mx-0 lg:absolute lg:-inset-x-10 lg:-bottom-20 lg:-top-10 lg:h-auto lg:px-0 lg:pt-10 xl:-bottom-32">
