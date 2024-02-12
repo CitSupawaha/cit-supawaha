@@ -74,8 +74,8 @@ const Hero = () => {
         <nav>
           <Container className="relative z-50 flex justify-between py-6">
             <div className="relative z-10 flex items-center gap-16">
-              <Logo className="h-10 w-auto" />
-
+              <div className="flex items-center"><Logo className="h-10 w-auto" />
+               <p className="font-bold text-lg -ml-12">PORTFOLIO</p></div>
               <div className="hidden lg:flex lg:gap-10">
                 {/* {navigation.map((item) => (
                   <a
