@@ -63,14 +63,14 @@ const AboutMe = () => {
         <p className="text-black text-2xl text-center mt-6 font-medium">
           Frontend Development
         </p>
-        <div className="grid grid-cols-12 gap-y-10  md:gap-x-8 py-10 sm:py-20 sm:px-14 md:px-24 lg:px-24 xl:px-28">
+        <div className="grid grid-cols-12 gap-y-10 md:gap-x-10 xl:gap-x-20 py-10 sm:py-20 sm:px-14 md:px-24 lg:px-24 xl:px-28">
           <div className="col-span-12 md:col-span-7 grid grid-cols-12 gap-4 sm:gap-4">
             {skilsItem.map((i) => (
               <div className="col-span-3 sm:col-span-3  xl:col-span-2">
                 <div className=" w-full bg-gray-200 rounded-full p-3 sm:p-2 md:p-4 flex items-center justify-center">
                   <img className="rounded-full" src={i.img} />
                 </div>
-                <p className="text-gray-900 font-medium text-center text-xs mt-2">{i.name}</p>
+                <p className="text-gray-500 font-medium text-center text-xs mt-2">{i.name}</p>
               </div>
               
             ))}

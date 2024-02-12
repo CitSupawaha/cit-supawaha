@@ -2,6 +2,7 @@
 import "./App.css";
 import Hero from "./component/Hero";
 import AboutMe from "./component/AboutMe"
+import Qualification from "./component/Qualification";
 // import {
 //   ArrowPathIcon,
 //   ArrowTopRightOnSquareIcon,
@@ -140,6 +141,7 @@ function App() {
       <Hero/>
 
       <AboutMe/>
+      <Qualification/>
       {/* <div className="bg-white">
         <div className="relative overflow-hidden">
           <Popover as="header" className="relative">
