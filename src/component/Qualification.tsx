@@ -22,13 +22,13 @@ const Qualification = () => {
   return (
     <section className="bg-gray-100">
       <div className="py-16 px-10 sm:px-14 md:px-24 lg:px-24 xl:px-32">
-        <p className="text-black text-3xl font-bold sm:text-[3em] text-center">
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center">
           {" "}
-          Qualification
-        </p>
-        <p className="text-black text-2xl text-center mt-6 font-medium ">
+          QUALIFICATION
+        </h1>
+        <h1 className="text-gray-500 text-2xl text-center mt-6 font-medium ">
           My personel journey
-        </p>
+        </h1>
         <div className="grid grid-cols-12 gap-4 mt-8">
           <div className="col-span-12 md:col-span-6">
             {/* <div className="flex  items-center gap-x-2">
@@ -70,7 +70,7 @@ const Qualification = () => {
                           />
                         </svg>
                       </span>
-                      <p className="text-black font-semibold text-lg">Educations</p>
+                      <h1 className="text-gray-500 font-semibold text-lg">Educations</h1>
                     </div>
                     {steps.map((step, index) => (
                       <li key={step.name} className={classNames("relative")}>
@@ -91,15 +91,15 @@ const Qualification = () => {
                               </span>
                             </span>
                             <span className="ml-4 mb-4 flex min-w-0 flex-col">
-                              <span className="text-base text-gray-500 font-semibold">
+                              <h1 className="text-base text-gray-500 font-semibold">
                                 {step.name}
-                              </span>
-                              <span className="text-sm mt-1 text-gray-500">
+                              </h1>
+                              <p className="text-sm mt-1 text-gray-500">
                                 {step.description}
-                              </span>
-                              <span className="text-sm mt-1 text-gray-500">
+                              </p>
+                              <p className="text-sm mt-1 text-gray-500">
                                 {step.year}
-                              </span>
+                              </p>
                             </span>
                           </a>
                         </>

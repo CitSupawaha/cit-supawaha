@@ -56,13 +56,13 @@ const AboutMe = () => {
   return (
     <section className="bg-gray-100">
       <div className="pt-16 sm:py-16 px-10">
-        <p className="text-black text-3xl font-bold sm:text-[3em] text-center">
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center">
           {" "}
-          What I skills?
-        </p>
-        <p className="text-black text-2xl text-center mt-6 font-medium">
+          WHAT I SKILLS?
+        </h1>
+        <h1 className="text-gray-500 text-2xl text-center mt-6 font-medium">
           Frontend Development
-        </p>
+        </h1>
         <div className="grid grid-cols-12 gap-y-10 md:gap-x-10 xl:gap-x-20 py-10 sm:py-20 sm:px-14 md:px-24 lg:px-24 xl:px-28">
           <div className="col-span-12 md:col-span-7 grid grid-cols-12 gap-4 sm:gap-4">
             {skilsItem.map((i) => (
@@ -87,9 +87,9 @@ const AboutMe = () => {
                           aria-hidden="true"
                         />
                       </span>
-                      <h3 className="text-lg tracking-tight text-gray-900 font-semibold">
+                      <h1 className="text-lg tracking-tight text-gray-500 font-semibold">
                         {feature.name}
-                      </h3>
+                      </h1>
                     </div>
 
                     <p className="mt-5 text-base text-gray-500 font-medium">

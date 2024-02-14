@@ -12,13 +12,20 @@
 
 body{
   /* font-family: 'Athiti', sans-serif; */
-  font-family: 'Concert One', sans-serif;
+  /* font-family: 'Concert One', sans-serif; */
   /* font-family: 'Noto Sans Thai', sans-serif; */
   /* font-family: 'Boogaloo', sans-serif; */
   /* font-family: 'Staatliches', sans-serif; */
 }
 
+
+
+h1{
+  font-family: 'Concert One', sans-serif;
+}
+
 p{
+  font-family: 'Athiti', sans-serif;
  /* font-family: 'Concert One', sans-serif; */
 
 }

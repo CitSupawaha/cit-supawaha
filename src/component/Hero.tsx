@@ -75,7 +75,7 @@ const Hero = () => {
           <Container className="relative z-50 flex justify-between py-6">
             <div className="relative z-10 flex items-center gap-16">
               <div className="flex items-center"><Logo className="h-10 w-auto" />
-               <p className="font-bold text-lg -ml-12">PORTFOLIO</p></div>
+               <h1 className="font-bold text-lg -ml-12">PORTFOLIO</h1></div>
               <div className="hidden lg:flex lg:gap-10">
                 {/* {navigation.map((item) => (
                   <a
@@ -200,7 +200,7 @@ const Hero = () => {
                       d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
                     />
                   </svg>
-                  Resume
+                  <p>Resume</p>
                 </Button>
                 {/* <AppStoreLink /> */}
                 {/* <Button
