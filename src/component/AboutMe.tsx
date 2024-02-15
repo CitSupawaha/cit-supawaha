@@ -55,7 +55,7 @@ const features = [
 const AboutMe = () => {
   return (
     <section className="bg-gray-100">
-      <div className="pt-16 sm:py-16 px-10">
+      <div className="pt-16 sm:py-16 px-8">
         <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center">
           {" "}
           WHAT I SKILLS?
@@ -79,7 +79,7 @@ const AboutMe = () => {
             {features.map((feature) => (
               <div key={feature.name} className="col-span-12">
                 <div className="rounded-xl bg-gray-200 px-4 pb-8">
-                  <div className="pt-6">
+                  <div className="pt-4">
                     <div className="flex items-center gap-4">
                       <span className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-700 to-pink-800  outline-offset-2 transition-colors  p-3 shadow-lg">
                         <feature.icon

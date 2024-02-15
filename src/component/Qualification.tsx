@@ -42,7 +42,7 @@ const Qualification = () => {
 
   return (
     <section className="bg-gray-200">
-      <div className="py-16 px-10 sm:px-14 md:px-24 lg:px-24 xl:px-32">
+      <div className="py-16 px-8 sm:px-14 md:px-24 lg:px-24 xl:px-32">
         <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center">
           {" "}
           QUALIFICATION
@@ -50,12 +50,12 @@ const Qualification = () => {
         <h1 className="text-gray-500 text-2xl text-center mt-6 font-medium ">
           My personel journey
         </h1>
-        <div className="grid grid-cols-12 gap-x-4 mt-8 gap-y-4">
+        <div className="grid grid-cols-12 gap-x-4 mt-8 gap-y-6">
           <div className="col-span-12 md:col-span-6 p-2 bg-gray-100 rounded-xl">
             <div className="">
               <nav aria-label="Progress">
                 <ol role="list" className="overflow-hidden">
-                  <div className="rounded-lg  pl-4 py-4 pb-2">
+                  <div className="rounded-lg  pl-2 py-2 pb-2">
                     <div className="flex mb-6 items-center justify-start gap-x-4">
                       <span className="inline-flex items-center justify-center  rounded-xl bg-gradient-to-r from-purple-700 to-pink-800  outline-offset-2 transition-colors  p-3 shadow-lg">
                         <svg
@@ -137,7 +137,7 @@ const Qualification = () => {
               <div className="">
                 <nav aria-label="Progress">
                   <ol role="list" className="overflow-hidden">
-                    <div className="rounded-lg  pl-4 py-4 pb-2">
+                    <div className="rounded-lg  pl-2 py-2 pb-2">
                       <div className="flex mb-6 items-center justify-start gap-x-4">
                         <span className="inline-flex items-center justify-center  rounded-xl bg-gradient-to-r from-purple-700 to-pink-800  outline-offset-2 transition-colors  p-3 shadow-lg">
                           <svg
