@@ -78,10 +78,10 @@ const AboutMe = () => {
           <div className="col-span-12 md:col-span-5 grid grid-cols-12 gap-6">
             {features.map((feature) => (
               <div key={feature.name} className="col-span-12">
-                <div className="rounded-lg bg-gray-200 px-4 pb-8">
+                <div className="rounded-xl bg-gray-200 px-4 pb-8">
                   <div className="pt-6">
                     <div className="flex items-center gap-4">
-                      <span className="inline-flex items-center justify-center rounded-md bg-gradient-to-r from-purple-700 to-pink-800  outline-offset-2 transition-colors  p-3 shadow-lg">
+                      <span className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-purple-700 to-pink-800  outline-offset-2 transition-colors  p-3 shadow-lg">
                         <feature.icon
                           className="h-6 w-6 text-white"
                           aria-hidden="true"
