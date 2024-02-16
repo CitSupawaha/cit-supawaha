@@ -141,7 +141,7 @@ function App() {
       <Hero/>
       <AboutMe/>
       <Qualification/>
-      <Project/>
+      {/* <Project/> */}
       {/* <div className="bg-white">
         <div className="relative overflow-hidden">
           <Popover as="header" className="relative">
