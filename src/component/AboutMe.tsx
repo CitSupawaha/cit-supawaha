@@ -15,10 +15,15 @@ import Ant from "../assets/image/Ant.png";
 import Navive from "../assets/image/Naive.png";
 import Next from "../assets/image/Next.png";
 import Tailwind from "../assets/image/Tailwind.png";
-import GitLab from "../assets/image/Gitlab.png"
-import Docker from "../assets/image/Docker.png"
-import Postman from "../assets/image/Postman.png"
-import { CloudArrowUpIcon, ComputerDesktopIcon, DevicePhoneMobileIcon, LockClosedIcon } from "@heroicons/react/16/solid";
+import GitLab from "../assets/image/Gitlab.png";
+import Docker from "../assets/image/Docker.png";
+import Postman from "../assets/image/Postman.png";
+import {
+  ComputerDesktopIcon,
+  DevicePhoneMobileIcon,
+} from "@heroicons/react/16/solid";
+import { useRef, useState } from "react";
+import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 const skilsItem = [
   { img: Html, name: "HTML" },
   { img: Flutter, name: "Flutter" },
@@ -47,19 +52,31 @@ const features = [
   },
   {
     name: "Mobile applications",
-    description:
-      "Developing mobile applications using Flutter.",
+    description: "Developing mobile applications using Flutter.",
     icon: DevicePhoneMobileIcon,
   },
 ];
 const AboutMe = () => {
+  const [isInView, setIsInView] = useState(false);
+  const ref = useRef(null);
+  function useParallax(value: MotionValue<number>, distance: number) {
+    return useTransform(value, [0, 1], [-distance, distance]);
+  }
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 10);
   return (
-    <section className="bg-gray-100">
-      <div className="pt-16 sm:py-16 px-8">
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center">
-          {" "}
-          WHAT I SKILLS?
-        </h1>
+    <section id="skills" className="bg-gray-100">
+      <div className="pt-16 sm:py-16 px-8" ref={ref}>
+        <motion.h1
+         style={{y}}
+        className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center"
+          initial={{ y: 10, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : ""}
+          onViewportEnter={() => setIsInView(true)}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+            WHAT I SKILLS?
+        </motion.h1>
         <h1 className="text-gray-500 text-2xl text-center mt-6 font-medium">
           Frontend Development
         </h1>
@@ -70,9 +87,10 @@ const AboutMe = () => {
                 <div className=" w-full bg-gray-200 rounded-full p-3 sm:p-2 md:p-4 flex items-center justify-center">
                   <img className="rounded-full" src={i.img} />
                 </div>
-                <p className="text-gray-500 font-medium text-center text-xs mt-2">{i.name}</p>
+                <p className="text-gray-500 font-medium text-center text-xs mt-2">
+                  {i.name}
+                </p>
               </div>
-              
             ))}
           </div>
           <div className="col-span-12 md:col-span-5 grid grid-cols-12 gap-6">

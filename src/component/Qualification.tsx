@@ -1,5 +1,3 @@
-import React from "react";
-
 const Qualification = () => {
   const steps = [
     {
@@ -36,12 +34,12 @@ const Qualification = () => {
       status: "upcoming",
     },
   ];
-  function classNames(...classes) {
+  function classNames(...classes){
     return classes.filter(Boolean).join(" ");
   }
 
   return (
-    <section className="bg-gray-200">
+    <section id="quaifition" className="bg-gray-200">
       <div className="py-16 px-8 sm:px-14 md:px-24 lg:px-24 xl:px-32">
         <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center">
           {" "}

@@ -30,6 +30,12 @@ p{
 
 }
 
+a{
+  font-family: 'Athiti', sans-serif;
+ /* font-family: 'Concert One', sans-serif; */
+
+}
+
 html{
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;

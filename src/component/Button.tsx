@@ -33,9 +33,9 @@ type ButtonProps = (
     | (Omit<React.ComponentPropsWithoutRef<'button'>, 'color'> & {
         href?: undefined
       })
-  )
+  ) 
 
-export function Button({ className, ...props }: ButtonProps) {
+export function Button({ className, ...props}: ButtonProps) {
   props.variant ??= 'solid'
   props.color ??= 'gray'
 
