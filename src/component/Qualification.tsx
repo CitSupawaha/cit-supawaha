@@ -48,8 +48,8 @@ const Qualification = () => {
         <h1 className="text-gray-500 text-2xl text-center mt-6 font-medium ">
           My personel journey
         </h1>
-        <div className="grid grid-cols-12 gap-x-4 mt-8 gap-y-6">
-          <div className="col-span-12 md:col-span-6 p-2 bg-gray-100 rounded-xl">
+        <div className="grid grid-cols-12 gap-x-4 mt-8 xl:mt-16 gap-y-6">
+          <div className="col-span-12 md:col-span-6 p-2 xl:p-10 bg-gray-100 rounded-xl">
             <div className="">
               <nav aria-label="Progress">
                 <ol role="list" className="overflow-hidden">
@@ -130,7 +130,7 @@ const Qualification = () => {
               </nav>
             </div>
           </div>
-          <div className="col-span-12 md:col-span-6 p-2 bg-gray-100 rounded-xl">
+          <div className="col-span-12 md:col-span-6 p-2 xl:p-10 bg-gray-100 rounded-xl">
             <div className="col-span-12 md:col-span-6">
               <div className="">
                 <nav aria-label="Progress">

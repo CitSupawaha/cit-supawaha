@@ -7,7 +7,6 @@ import { Logo } from "./Logo";
 import { NavLinks } from "./Navlinks";
 import Profile from "../assets/image/profile.png";
 import Resume from "../assets/pdf/resume.pdf";
-import { useState } from "react";
 
 const Hero = () => {
   const navigation = [
@@ -16,29 +15,23 @@ const Hero = () => {
     { name: "Project", href: "#" },
     { name: "Contace", href: "#" },
   ];
-  const [loading, setLoading] = useState(false);
+ 
 
   function downloadPdf() {
-    setLoading(true);
     setTimeout(() => {
       // Path to the PDF file
       const filePath = Resume;
-
       // Create a download link
       const link = document.createElement("a");
       link.href = filePath;
       link.download = "resume.pdf";
-
       // Append the link to the body
       document.body.appendChild(link);
-
       // Programmatically trigger the download
       link.click();
-
       // Clean up
       document.body.removeChild(link);
     }, 2000);
-    setLoading(false);
   }
 
   function MenuIcon(props: React.ComponentPropsWithoutRef<"svg">) {
