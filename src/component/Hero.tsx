@@ -15,7 +15,6 @@ const Hero = () => {
     { name: "Project", href: "#" },
     { name: "Contace", href: "#" },
   ];
- 
 
   function downloadPdf() {
     setTimeout(() => {
@@ -188,10 +187,7 @@ const Hero = () => {
               </motion.p>
               <p className="mt-6 text-lg text-white text-center sm:text-start font-medium"></p>
               <div className="mt-8 flex justify-center sm:justify-start gap-x-6 gap-y-4">
-                <Button
-                  className="w-40 gap-2"
-                  onClick={downloadPdf}
-                >
+                <Button className="w-40 gap-2" onClick={downloadPdf}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

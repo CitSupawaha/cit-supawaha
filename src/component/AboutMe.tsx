@@ -19,9 +19,9 @@ import GitLab from "../assets/image/Gitlab.png";
 import Docker from "../assets/image/Docker.png";
 import Postman from "../assets/image/Postman.png";
 import MongoDB from "../assets/image/Mongo.png";
-import Go from "../assets/image/Go.png"
-import Git from "../assets/image/Git.png"
-import PostgreSQL from "../assets/image/Postgrest.png"
+import Go from "../assets/image/Go.png";
+import Git from "../assets/image/Git.png";
+import PostgreSQL from "../assets/image/Postgrest.png";
 import {
   ComputerDesktopIcon,
   DevicePhoneMobileIcon,
@@ -49,7 +49,6 @@ const skilsItem = [
   { img: Go, name: "Go (Basic)" },
   { img: Git, name: "Git" },
   { img: PostgreSQL, name: "PostgreSQL" },
-
 ];
 
 const features = [
@@ -77,14 +76,14 @@ const AboutMe = () => {
     <section id="skills" className="bg-gray-100">
       <div className="pt-16 sm:py-16 px-8" ref={ref}>
         <motion.h1
-         style={{y}}
-        className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center"
+          style={{ y }}
+          className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center"
           initial={{ y: 10, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : ""}
           onViewportEnter={() => setIsInView(true)}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-            WHAT I SKILLS?
+          WHAT I SKILLS?
         </motion.h1>
         <h1 className="text-gray-500 text-2xl text-center mt-6 font-medium">
           Frontend Development
@@ -93,11 +92,11 @@ const AboutMe = () => {
           <div className="col-span-12 md:col-span-8  grid grid-cols-12 gap-4 sm:gap-6">
             {skilsItem.map((i) => (
               <div className="col-span-3 sm:col-span-3  xl:col-span-2 ">
-               <div className="flex justify-center">
-               <div className=" sm:w-24 sm:h-24 bg-gray-200 rounded-full p-3 sm:p-2 md:p-4">
-                  <img className="rounded-full " src={i.img} />
+                <div className="flex justify-center">
+                  <div className=" sm:w-24 sm:h-24 bg-gray-200 rounded-full p-3 sm:p-2 md:p-4">
+                    <img className="rounded-full " src={i.img} />
+                  </div>
                 </div>
-               </div>
                 <p className="text-gray-500 font-medium text-center text-xs mt-2">
                   {i.name}
                 </p>
