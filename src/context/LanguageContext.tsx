@@ -58,9 +58,43 @@ const enTranslations = {
   msc: "MSC Sitipol Co., Ltd.",
   msc_desc: "Programmer",
   sirisoft: "Sirisoft Public Co., Ltd.",
-  sirisoft_desc: "Frontend Developer"
+  sirisoft_desc: "Frontend Developer",
   // freelance: "Freelance",
   // freelance_desc: "Frontend Developer",
+
+   // Project section
+   project_title: "PROJECTS",
+   recent_work: "My recent work",
+   view_project: "View Project",
+ 
+   // Contact section
+   contact_title: "CONTACT ME",
+   get_in_touch: "Get in touch",
+   send_message: "Send me a message",
+   contact_info: "Contact Information",
+   name: "Name",
+   email: "Email",
+   phone: "Phone",
+   location: "Location",
+   message: "Message",
+   your_name: "Your name",
+   your_email: "Your email",
+   your_message: "Write your message here...",
+   send: "Send Message",
+   sending: "Sending...",
+   message_sent: "Message Sent",
+   success_message: "Your message has been sent successfully!",
+   error_message: "There was an error sending your message. Please try again.",
+   map_placeholder: "Map will be displayed here",
+ 
+   // Footer
+   footer_description:
+     "A passionate frontend developer creating responsive and user-friendly web applications with modern technologies.",
+   quick_links: "Quick Links",
+   social_media: "Social Media",
+   all_rights_reserved: "All rights reserved.",
+   privacy_policy: "Privacy Policy",
+   terms_of_service: "Terms of Service",
 }
 
 // Thai translations
@@ -109,6 +143,40 @@ const thTranslations = {
   sirisoft_desc: "นักพัฒนาฟรอนท์เอนด์",
   // freelance: "ฟรีแลนซ์",
   // freelance_desc: "นักพัฒนาฟรอนท์เอนด์",
+
+
+  // Project section
+  project_title: "โปรเจค",
+  recent_work: "ผลงานล่าสุดของฉัน",
+  view_project: "ดูโปรเจค",
+
+  // Contact section
+  contact_title: "ติดต่อฉัน",
+  get_in_touch: "ติดต่อได้ที่",
+  send_message: "ส่งข้อความถึงฉัน",
+  contact_info: "ข้อมูลการติดต่อ",
+  name: "ชื่อ",
+  email: "อีเมล",
+  phone: "โทรศัพท์",
+  location: "ที่อยู่",
+  message: "ข้อความ",
+  your_name: "ชื่อของคุณ",
+  your_email: "อีเมลของคุณ",
+  your_message: "เขียนข้อความของคุณที่นี่...",
+  send: "ส่งข้อความ",
+  sending: "กำลังส่ง...",
+  message_sent: "ส่งข้อความแล้ว",
+  success_message: "ข้อความของคุณถูกส่งเรียบร้อยแล้ว!",
+  error_message: "เกิดข้อผิดพลาดในการส่งข้อความของคุณ โปรดลองอีกครั้ง",
+  map_placeholder: "แผนที่จะแสดงที่นี่",
+
+  // Footer
+  footer_description: "นักพัฒนาฟรอนท์เอนด์ที่มีความกระตือรือร้นในการสร้างเว็บแอปพลิเคชันที่ตอบสนองและเป็นมิตรกับผู้ใช้ด้วยเทคโนโลยีที่ทันสมัย",
+  quick_links: "ลิงก์ด่วน",
+  social_media: "โซเชียลมีเดีย",
+  all_rights_reserved: "สงวนลิขสิทธิ์",
+  privacy_policy: "นโยบายความเป็นส่วนตัว",
+  terms_of_service: "เงื่อนไขการให้บริการ",
 }
 
 const translations = {

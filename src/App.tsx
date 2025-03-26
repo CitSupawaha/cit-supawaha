@@ -7,6 +7,9 @@ import AboutMe from "./component/AboutMe"
 import Qualification from "./component/Qualification"
 import { motion } from "framer-motion"
 import { LanguageProvider } from "./context/LanguageContext"
+import Project from "./component/Project"
+import Contact from "./component/Contact"
+import Footer from "./component/Footer"
 //import Project from "./component/Project";
 
 function App() {
@@ -17,6 +20,8 @@ function App() {
         <AboutMe />
         <Qualification />
         {/* <Project/> */}
+        <Contact/>
+        <Footer/>
       </motion.div>
     </LanguageProvider>
   )
