@@ -29,9 +29,21 @@ const Qualification = () => {
 
   const experience = [
     {
+      name: t("sirisoft"),
+      description: t("sirisoft_desc"),
+      year: "Jan 2025 - Present",
+      status: "upcoming",
+    },
+    {
+      name: t("msc"),
+      description: t("msc_desc"),
+      year: "Aug 2024 - Dec 2024",
+      status: "upcoming",
+    },
+    {
       name: t("maximum_soft"),
       description: t("maximum_soft_desc"),
-      year: "APR 2023 - Present",
+      year: "APR 2023 - Aug 2024",
       status: "upcoming",
     },
     {
@@ -40,12 +52,13 @@ const Qualification = () => {
       year: "NOV 2021 - MAR 2023",
       status: "upcoming",
     },
-    {
-      name: t("freelance"),
-      description: t("freelance_desc"),
-      year: "2023 - Present",
-      status: "upcoming",
-    },
+   
+    // {
+    //   name: t("freelance"),
+    //   description: t("freelance_desc"),
+    //   year: "2023 - Present",
+    //   status: "upcoming",
+    // },
   ]
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ")

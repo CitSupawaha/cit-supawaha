@@ -55,8 +55,12 @@ const enTranslations = {
   maximum_soft_desc: "Frontend Developer",
   yim: "Y.I.M Coporations",
   yim_desc: "Frontend Developer and Mobile Developer",
-  freelance: "Freelance",
-  freelance_desc: "Frontend Developer",
+  msc: "MSC Sitipol Co., Ltd.",
+  msc_desc: "Programmer",
+  sirisoft: "Sirisoft Public Co., Ltd.",
+  sirisoft_desc: "Frontend Developer"
+  // freelance: "Freelance",
+  // freelance_desc: "Frontend Developer",
 }
 
 // Thai translations
@@ -99,8 +103,12 @@ const thTranslations = {
   maximum_soft_desc: "นักพัฒนาฟรอนท์เอนด์",
   yim: "บริษัท วาย.ไอ.เอ็ม คอร์ปอเรชั่น",
   yim_desc: "นักพัฒนาฟรอนท์เอนด์และนักพัฒนาแอปพลิเคชันมือถือ",
-  freelance: "ฟรีแลนซ์",
-  freelance_desc: "นักพัฒนาฟรอนท์เอนด์",
+  msc: "บริษัท เอ็มเอสซี สิทธิผล จำกัด",
+  msc_desc: "โปรแกรมเมอร์",
+  sirisoft: "บริษัท สิริซอฟต์ จำกัด (มหาชน)",
+  sirisoft_desc: "นักพัฒนาฟรอนท์เอนด์",
+  // freelance: "ฟรีแลนซ์",
+  // freelance_desc: "นักพัฒนาฟรอนท์เอนด์",
 }
 
 const translations = {
