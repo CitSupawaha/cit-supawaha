@@ -27,6 +27,8 @@ import PostgreSQL from "../assets/image/Postgrest.png"
 import { ComputerDesktopIcon, DevicePhoneMobileIcon } from "@heroicons/react/16/solid"
 import { useRef, useState } from "react"
 import { type MotionValue, motion, useScroll, useTransform, useInView } from "framer-motion"
+import { useLanguage } from "../context/LanguageContext"
+
 const skilsItem = [
   { img: Html, name: "HTML" },
   { img: Flutter, name: "Flutter" },
@@ -50,20 +52,22 @@ const skilsItem = [
   { img: PostgreSQL, name: "PostgreSQL" },
 ]
 
-const features = [
-  {
-    name: "Web Applications",
-    description:
-      "I'm a front-end developer with experience in building responsive and optimized sites using React, Next and Vue.",
-    icon: ComputerDesktopIcon,
-  },
-  {
-    name: "Mobile applications",
-    description: "Developing mobile applications using Flutter.",
-    icon: DevicePhoneMobileIcon,
-  },
-]
 const AboutMe = () => {
+  const { t, language } = useLanguage()
+
+  const features = [
+    {
+      name: t("web_applications"),
+      description: t("web_applications_desc"),
+      icon: ComputerDesktopIcon,
+    },
+    {
+      name: t("mobile_applications"),
+      description: t("mobile_applications_desc"),
+      icon: DevicePhoneMobileIcon,
+    },
+  ]
+
   const [isInView, setIsInView] = useState(false)
   const ref = useRef(null)
   const isVisible = useInView(ref, { once: false, amount: 0.2 })
@@ -98,30 +102,33 @@ const AboutMe = () => {
     },
   }
 
+  // Apply the appropriate font class based on language
+  const fontClass = language === "en" ? "font-en" : "font-th"
+
   return (
     <section id="skills" className="bg-gray-100">
       <div className="pt-16 sm:py-16 px-8" ref={ref}>
         <motion.h1
           style={{ y }}
-          className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center"
+          className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center ${fontClass}`}
           initial={{ y: 10, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : ""}
           onViewportEnter={() => setIsInView(true)}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          WHAT I SKILLS?
+          {t("what_skills")}
         </motion.h1>
         <motion.h1
-          className="text-gray-500 text-2xl text-center mt-6 font-medium"
+          className={`text-gray-500 text-2xl text-center mt-6 font-medium ${fontClass}`}
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Frontend Development
+          {t("frontend_dev")}
         </motion.h1>
         <div className="grid grid-cols-12 gap-y-10 xl:gap-y-20 md:gap-x-10 xl:gap-x-20 py-10 sm:py-20 sm:px-14 md:px-16">
           <motion.div
-            className="col-span-12 md:col-span-8 grid grid-cols-12 gap-4 sm:gap-6"
+            className={`col-span-12 md:col-span-8 grid grid-cols-12 gap-4 sm:gap-6 ${fontClass}`}
             variants={container}
             initial="hidden"
             animate={isVisible ? "show" : "hidden"}
@@ -147,11 +154,11 @@ const AboutMe = () => {
                     <img className="rounded-full" src={i.img || "/placeholder.svg"} />
                   </motion.div>
                 </div>
-                <p className="text-gray-500 font-medium text-center text-xs mt-2">{i.name}</p>
+                <p className={`text-gray-500 font-medium text-center text-xs mt-2 ${fontClass}`}>{i.name}</p>
               </motion.div>
             ))}
           </motion.div>
-          <div className="col-span-12 md:col-span-4 grid grid-cols-12 gap-6">
+          <div className={`col-span-12 md:col-span-4 grid grid-cols-12 gap-6 ${fontClass}`}>
             {features.map((feature, index) => (
               <motion.div
                 key={feature.name}
@@ -177,10 +184,12 @@ const AboutMe = () => {
                       >
                         <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                       </motion.span>
-                      <h1 className="text-lg tracking-tight text-gray-500 font-semibold">{feature.name}</h1>
+                      <h1 className={`text-lg tracking-tight text-gray-500 font-semibold ${fontClass}`}>
+                        {feature.name}
+                      </h1>
                     </div>
 
-                    <p className="mt-5 text-base text-gray-500 font-medium">{feature.description}</p>
+                    <p className={`mt-5 text-base text-gray-500 font-medium ${fontClass}`}>{feature.description}</p>
                   </div>
                 </motion.div>
               </motion.div>

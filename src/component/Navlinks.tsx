@@ -1,20 +1,29 @@
-import { useRef, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+"use client"
+
+import { useRef, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { useLanguage } from "../context/LanguageContext"
 
 export function NavLinks() {
+  const { t, language } = useLanguage()
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const timeoutRef = useRef<number | null>(null)
 
-  return [
-    ['Features', '/#features'],
-    ['Reviews', '/#reviews'],
-    ['Pricing', '/#pricing'],
-    ['FAQs', '/#faqs'],
-  ].map(([label, href], index) => (
+  // Apply the appropriate font class based on language
+  const fontClass = language === "en" ? "font-en" : "font-th"
+
+  const navItems = [
+    [t("skills"), "/#skills"],
+    [t("qualification"), "/#quaifition"],
+    [t("project"), "/#"],
+    [t("contact"), "/#"],
+  ]
+
+  return navItems.map(([label, href], index) => (
     <a
       key={label}
       href={href}
-      className="relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-white transition-colors delay-150 hover:text-gray-900 hover:delay-0"
+      className={`relative -mx-3 -my-2 rounded-lg px-3 py-2 text-sm text-white transition-colors delay-150 hover:text-gray-900 hover:delay-0 ${fontClass}`}
       onMouseEnter={() => {
         if (timeoutRef.current) {
           window.clearTimeout(timeoutRef.current)
@@ -45,3 +54,4 @@ export function NavLinks() {
     </a>
   ))
 }
+

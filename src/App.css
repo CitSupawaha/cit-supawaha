@@ -1,35 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* #root {
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  font-family: 'Athiti', sans-serif;
-} */
+
+:root {
+  --font-family-en: "Athiti", sans-serif;
+  --font-family-th: "IBM Plex Sans Thai", sans-serif;
+  --font-family: var(--font-family-en);
+}
 
 body {
-  /* font-family: 'Athiti', sans-serif; */
-  /* font-family: 'Concert One', sans-serif; */
-  /* font-family: 'Noto Sans Thai', sans-serif; */
-  /* font-family: 'Boogaloo', sans-serif; */
-  /* font-family: 'Staatliches', sans-serif; */
+  font-family: var(--font-family);
+}
+
+/* Language specific font settings */
+body.lang-en {
+  font-family: var(--font-family-en);
+}
+
+body.lang-th {
+  font-family: var(--font-family-th);
 }
 
 h1 {
-  font-family: "Concert One", sans-serif;
+  font-weight: 700;
 }
 
-p {
-  font-family: "Athiti", sans-serif;
-  /* font-family: 'Concert One', sans-serif; */
-}
-
-a {
-  font-family: "Athiti", sans-serif;
-  /* font-family: 'Concert One', sans-serif; */
+p,
+a,
+button,
+span,
+div {
+  font-family: inherit;
 }
 
 html {
@@ -65,7 +66,12 @@ h1.bg-gradient-to-r {
   }
 }
 
-/* section{
-  scroll-snap-align: center;
-} */
+/* Font classes for direct application */
+.font-en {
+  font-family: var(--font-family-en) !important;
+}
+
+.font-th {
+  font-family: var(--font-family-th) !important;
+}
 

@@ -2,21 +2,26 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
+import { useLanguage } from "../context/LanguageContext"
 
 const Qualification = () => {
+  const { t, language } = useLanguage()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: false, amount: 0.2 })
 
+  // Apply the appropriate font class based on language
+  const fontClass = language === "en" ? "font-en" : "font-th"
+
   const steps = [
     {
-      name: "Suranaree University of Technology",
-      description: "B. Eng in Computer Engineering.",
+      name: t("sut"),
+      description: t("sut_desc"),
       year: "2018 - 2022",
       status: "upcoming",
     },
     {
-      name: "Samrongthap Wittayakom School",
-      description: "High School Diploma.",
+      name: t("high_school"),
+      description: t("high_school_desc"),
       year: "2015 - 2018",
       status: "upcoming",
     },
@@ -24,20 +29,20 @@ const Qualification = () => {
 
   const experience = [
     {
-      name: "Maximum Soft Co., Ltd.",
-      description: "Frontend Developer",
+      name: t("maximum_soft"),
+      description: t("maximum_soft_desc"),
       year: "APR 2023 - Present",
       status: "upcoming",
     },
     {
-      name: "Y.I.M Coporations",
-      description: "Frontend Developer and Mobile Developer",
+      name: t("yim"),
+      description: t("yim_desc"),
       year: "NOV 2021 - MAR 2023",
       status: "upcoming",
     },
     {
-      name: "Freelance",
-      description: "Frontend Developer",
+      name: t("freelance"),
+      description: t("freelance_desc"),
       year: "2023 - Present",
       status: "upcoming",
     },
@@ -73,24 +78,24 @@ const Qualification = () => {
     <section id="quaifition" className="bg-gray-200">
       <div className="py-16 px-8 sm:px-14 md:px-24 lg:px-24 xl:px-32" ref={ref}>
         <motion.h1
-          className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center"
+          className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 text-3xl font-bold sm:text-[3em] text-center ${fontClass}`}
           initial={{ opacity: 0, y: -20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.7 }}
         >
-          QUALIFICATION
+          {t("qualification_title")}
         </motion.h1>
         <motion.h1
-          className="text-gray-500 text-2xl text-center mt-6 font-medium"
+          className={`text-gray-500 text-2xl text-center mt-6 font-medium ${fontClass}`}
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          My personel journey
+          {t("personal_journey")}
         </motion.h1>
         <div className="grid grid-cols-12 gap-x-4 mt-8 xl:mt-16 gap-y-6">
           <motion.div
-            className="col-span-12 md:col-span-6 p-2 xl:p-10 bg-gray-100 rounded-xl"
+            className={`col-span-12 md:col-span-6 p-2 xl:p-10 bg-gray-100 rounded-xl ${fontClass}`}
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -124,7 +129,7 @@ const Qualification = () => {
                           />
                         </svg>
                       </motion.span>
-                      <h1 className="text-gray-500 font-semibold text-lg">Educations</h1>
+                      <h1 className={`text-gray-500 font-semibold text-lg ${fontClass}`}>{t("educations")}</h1>
                     </div>
                     <motion.div variants={containerVariants} initial="hidden" animate={isInView ? "visible" : "hidden"}>
                       {steps.map((step, index) => (
@@ -156,8 +161,8 @@ const Qualification = () => {
                                 </motion.span>
                               </span>
                               <span className="ml-4 mb-4 flex min-w-0 flex-col">
-                                <h1 className="text-base text-gray-500 font-semibold">{step.name}</h1>
-                                <p className="text-sm mt-1 text-gray-500">{step.description}</p>
+                                <h1 className={`text-base text-gray-500 font-semibold ${fontClass}`}>{step.name}</h1>
+                                <p className={`text-sm mt-1 text-gray-500 ${fontClass}`}>{step.description}</p>
                                 <div className="flex gap-2 mt-1 items-center">
                                   <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +179,7 @@ const Qualification = () => {
                                     />
                                   </svg>
 
-                                  <p className="text-sm mt-1 text-gray-500">{step.year}</p>
+                                  <p className={`text-sm mt-1 text-gray-500 ${fontClass}`}>{step.year}</p>
                                 </div>
                               </span>
                             </motion.a>
@@ -188,7 +193,7 @@ const Qualification = () => {
             </div>
           </motion.div>
           <motion.div
-            className="col-span-12 md:col-span-6 p-2 xl:p-10 bg-gray-100 rounded-xl"
+            className={`col-span-12 md:col-span-6 p-2 xl:p-10 bg-gray-100 rounded-xl ${fontClass}`}
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -223,7 +228,7 @@ const Qualification = () => {
                             />
                           </svg>
                         </motion.span>
-                        <h1 className="text-gray-500 font-semibold text-lg">Experiendce</h1>
+                        <h1 className={`text-gray-500 font-semibold text-lg ${fontClass}`}>{t("experience")}</h1>
                       </div>
                       <motion.div
                         variants={containerVariants}
@@ -259,8 +264,8 @@ const Qualification = () => {
                                   </motion.span>
                                 </span>
                                 <span className="ml-4 mb-4 flex min-w-0 flex-col">
-                                  <h1 className="text-base text-gray-500 font-semibold">{step.name}</h1>
-                                  <p className="text-sm mt-1 text-gray-500">{step.description}</p>
+                                  <h1 className={`text-base text-gray-500 font-semibold ${fontClass}`}>{step.name}</h1>
+                                  <p className={`text-sm mt-1 text-gray-500 ${fontClass}`}>{step.description}</p>
                                   <div className="flex gap-2 items-center mt-1">
                                     <svg
                                       xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +282,7 @@ const Qualification = () => {
                                       />
                                     </svg>
 
-                                    <p className="text-sm mt-1 text-gray-500">{step.year}</p>
+                                    <p className={`text-sm mt-1 text-gray-500 ${fontClass}`}>{step.year}</p>
                                   </div>
                                 </span>
                               </motion.a>
